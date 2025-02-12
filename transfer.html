@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <title>Payment Gateway</title>
+</head>
+
+<body class="bg-gray-200 p-4 jetbrains-mono">
+    <div class="bg-white w-full max-w-xl lg:max-w-2xl mx-auto p-4 lg:pr-24 lg:pl-24 rounded-sm">
+        <h1 class="text-lg font-bold text-center lg:text-3xl mb-4">Terima kasih telah order Plogos CRM</h1>
+        <p class="font-poppins text-md text-center mb-4">Untuk menyelesaikan proses order, silahkan transfer sejumlah</p>
+        <h1 class="text-center text-3xl font-bold text-green-500 mb-4">Rp. 45.000,-</h1>
+        <h1 class="text-lg font-extrabold text-center border-l-3 border-yellow-600 bg-yellow-400 py-2 font-poppins mb-4">Penting! <span class="font-thin">Mohon transfer sesuai sampai 3 digit terakir</span></h1>
+        <p class="font-poppins text-md text-center mb-4">ke salah satu bank berikut ini:</p>
+        <div class="w-full flex flex-col border border-dashed rounded-md justify-center items-center p-2">
+            <img src="assets/image/logo-BCA.jpg" alt="" class="w-[120px] h-auto">
+            <p class="font-poppins">No. Rek: <span id="textToCopy" class="font-bold text-blue-500">123 456 7890</span></p>
+            <p class="font-poppins">Atas Nama: <span class="font-bold">Andi Subianto</span></p>
+            <button onclick="copyText()" class="px-4 py-2 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition">
+                Salin No. Rek
+            </button>
+        </div>
+        <div class="w-full flex flex-col border border-dashed rounded-md justify-center items-center p-2 mb-4">
+            <img src="assets/image/bank mandiri.png" alt="" class="w-[120px] h-auto">
+            <p class="font-poppins">No. Rek: <span id="textToCopy2" class="font-bold text-blue-500">098 765 4321</span></p>
+            <p class="font-poppins">Atas Nama: <span class="font-bold">Bahrul Imam</span></p>
+            <button onclick="copyText2()" class="px-4 py-2 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition">
+                Salin No. Rek
+            </button>
+        </div>
+        <p class="font-poppins text-center">Konfirmasi pembayaran anda di:</p>
+        <div class="flex w-full justify-center">
+            <a href="konfirmasi.html" class="font-poppins text-blue-500">Konfirmasi pembayaran</a>
+        </div>
+    </div>
+    <script>
+        function copyText() {
+            let text = document.getElementById("textToCopy").innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert("No. Rek berhasil disalin!");
+            }).catch(err => {
+                console.error("Gagal menyalin teks: ", err);
+            });
+        }
+        function copyText2() {
+            let text = document.getElementById("textToCopy2").innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert("No. Rek berhasil disalin!");
+            }).catch(err => {
+                console.error("Gagal menyalin teks: ", err);
+            });
+        }
+    </script>
+</body>
+
+</html>

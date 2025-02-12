@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Confirm Gateway</title>
+</head>
+
+<body class="bg-gray-200 p-4 jetbrains-mono">
+    <h1 class="text-center text-2xl font-poppins">Konfirmasi Pembayaran</h1>
+    <div class="bg-white w-full max-w-xl lg:max-w-2xl mx-auto p-4 lg:pr-24 lg:pl-24 rounded-sm">
+        <div class="flex justify-center">
+            <form onsubmit="event.preventDefault(); kirimKeWhatsApp();">
+                <div class="w-full flex justify-center">
+                    <span class="font-bold text-[18px] border-b-2 mb-1 text-center">Data Penerima:</span>
+                </div>
+                <input type="text" name="nama" id="nama" class="w-full py-2 rounded-md mb-4" placeholder="Nama Anda">
+                <input type="email" name="email" id="email" class="w-full py-2 rounded-md mb-4" placeholder="Email Anda">
+                <input type="text" name="alamat" id="alamat" class="w-full py-2 rounded-md mb-4" placeholder="Kota/Kab Anda">
+                <div class="w-full flex justify-center">
+                    <span class="font-bold text-[18px] border-b-2 mb-1 text-center">Bukti Transfer:</span>
+                </div>
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-bold">Atas Nama Rek</label>
+                    <input type="text" id="name" name="pemilik_rekening" placeholder="Pemelik Rekening" required class="mt-1 block w-full p-2 rounded border border-gray-600 focus:outline-none focus:ring focus:ring-blue-600" />
+                </div>
+                <div class="mb-4">
+                    <label for="transfer_ke" class="block text-sm font-bold">Transfer ke</label>
+                    <select id="transfer_ke" class="mt-1 block w-full p-2 rounded border border-gray-600 focus:outline-none focus:ring focus:ring-blue-600">
+                        <option selected>--Pilihan--</option>
+                        <option value="BCA Andi Subianto-123 456 7890">BCA Andi Subianto-123 456 7890</option>
+                        <option value="Mandiri Bahrul Imam-098 765 4321">Mandiri Bahrul Imam-098 765 4321</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="date" class="block text-sm font-bold">Tanggal Transfer</label>
+                    <input type="date" id="date" name="tanggal" required class="mt-1 block w-full p-2 rounded border border-gray-600 focus:outline-none focus:ring focus:ring-blue-600" />
+                </div>
+                <div class="mb-4">
+                    <label for="jumlah" class="block text-sm font-bold">Jumlah Transfer</label>
+                    <input type="text" id="jumlah" name="jumlah" placeholder="contoh => 10000" required class="mt-1 block w-full p-2 rounded border border-gray-600 focus:outline-none focus:ring focus:ring-blue-600" />
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded transition duration-300">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

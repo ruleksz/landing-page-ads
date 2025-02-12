@@ -1,0 +1,23 @@
+.jetbrains-mono {
+  font-family: "JetBrains Mono", serif;
+}
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+.payment-option {
+  margin-bottom: 10px;
+}
+.hidden {
+  display: none;
+}
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
